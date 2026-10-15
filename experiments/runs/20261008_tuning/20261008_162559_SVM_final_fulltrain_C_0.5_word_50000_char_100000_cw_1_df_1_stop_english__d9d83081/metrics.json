@@ -1,0 +1,7 @@
+{
+  "params": "C=0.5,word=50000,char=100000,cw=1,df=1,stop=english,wn=(1, 2),cn=(3, 5),tf=True,seed=42",
+  "train_acc": 0.999457111834962,
+  "secs": 41.53242109999974,
+  "n_iter": 31,
+  "warnings": []
+}

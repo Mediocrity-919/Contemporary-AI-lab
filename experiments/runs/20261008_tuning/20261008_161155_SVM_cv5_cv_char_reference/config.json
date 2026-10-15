@@ -1,0 +1,97 @@
+{
+  "model": "SVM",
+  "implementation": "sklearn.svm.LinearSVC",
+  "data_version": "v7_keepall",
+  "stage": "cv5",
+  "fold": null,
+  "random_state": 42,
+  "params": {
+    "word_features": 20000,
+    "char_features": 50000,
+    "char_weight": 1.0,
+    "min_df": 2,
+    "max_df": 1.0,
+    "stop_words": "english",
+    "word_ngram": [
+      1,
+      2
+    ],
+    "char_ngram": [
+      3,
+      5
+    ],
+    "sublinear_tf": true,
+    "C": 0.3
+  },
+  "params_label": "C=0.3,word=20000,char=50000,cw=1,df=2,stop=english,wn=(1, 2),cn=(3, 5),tf=True,seed=42,cv5,n=5",
+  "text_column": "text_clean",
+  "train_rows": 5894,
+  "val_rows": 1474,
+  "train_sha256": "71b3be0b17f339a57847affad11b312289013fb1f88916cd46f25499a67822b9",
+  "val_sha256": "f412627efd24e91a1a9014cb3c08054042435f56a0630b7ca5fa201f2f573696",
+  "tfidf": {
+    "max_features": 20000,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "sublinear_tf": true,
+    "stop_words": "english",
+    "min_df": 2,
+    "norm": "l2",
+    "word_dtype": "float64",
+    "char_features": 50000,
+    "char_analyzer": "char_wb",
+    "char_ngram": [
+      3,
+      5
+    ]
+  },
+  "fixed_epochs": null,
+  "selection": "accuracy primary; macro-F1 breaks exact accuracy ties",
+  "fit_boundary": "vectorizers fitted on this training split only",
+  "environment": {
+    "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:42:35) [MSC v.1942 64 bit (AMD64)]",
+    "executable": "D:\\Anaconda_envs\\envs\\pytorch_env\\python.exe",
+    "sklearn": "1.7.2",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3"
+  },
+  "actual_features": 70000,
+  "zero_train_vectors": 0,
+  "zero_val_vectors": 0,
+  "classifier_params": {
+    "C": 0.3,
+    "class_weight": null,
+    "dual": "auto",
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "loss": "squared_hinge",
+    "max_iter": 5000,
+    "multi_class": "ovr",
+    "penalty": "l2",
+    "random_state": 42,
+    "tol": 0.0001,
+    "verbose": 0
+  },
+  "secs_including_features": 16.828320900000108,
+  "source_runs": [
+    "20261008_105232_SVM_cv_stratified_C_0.3_word_20000_char_50000_seed_42_fold1",
+    "20261008_105249_SVM_cv_stratified_C_0.3_word_20000_char_50000_seed_42_fold2",
+    "20261008_105317_SVM_cv_stratified_C_0.3_word_20000_char_50000_seed_42_fold3",
+    "20261008_105343_SVM_cv_stratified_C_0.3_word_20000_char_50000_seed_42_fold4",
+    "20261008_105409_SVM_cv_stratified_C_0.3_word_20000_char_50000_seed_42_fold5"
+  ],
+  "source_run_paths": [
+    "experiments\\runs\\20261008_revision\\20261008_105232_SVM_cv_stratified_C_0.3_word_20000_char_50000_seed_42_fold1",
+    "experiments\\runs\\20261008_revision\\20261008_105249_SVM_cv_stratified_C_0.3_word_20000_char_50000_seed_42_fold2",
+    "experiments\\runs\\20261008_revision\\20261008_105317_SVM_cv_stratified_C_0.3_word_20000_char_50000_seed_42_fold3",
+    "experiments\\runs\\20261008_revision\\20261008_105343_SVM_cv_stratified_C_0.3_word_20000_char_50000_seed_42_fold4",
+    "experiments\\runs\\20261008_revision\\20261008_105409_SVM_cv_stratified_C_0.3_word_20000_char_50000_seed_42_fold5"
+  ],
+  "candidate": "char_reference",
+  "fold_seed": 42,
+  "inner_selected_epochs": [],
+  "final_epochs": null,
+  "evaluation_note": "post-selection non-nested candidate comparison; MLP epochs selected inside each outer training fold, never on its scoring fold"
+}

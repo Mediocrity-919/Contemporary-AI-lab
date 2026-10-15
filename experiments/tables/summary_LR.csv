@@ -1,0 +1,3 @@
+time,model,params,train_acc,val_acc,val_macro_p,val_macro_r,val_macro_f1,val_weighted_f1,note
+20260924_203428,LR,"C=300,iter=500",0.9998,0.9072,0.9074,0.9072,0.9072,0.9072,20260924_203428_LR_C300_iter500_r2
+20260924_203440,LR,"C=1000,iter=500",0.9998,0.9065,0.9074,0.9066,0.9068,0.9068,20260924_203440_LR_C1000_iter500_r2

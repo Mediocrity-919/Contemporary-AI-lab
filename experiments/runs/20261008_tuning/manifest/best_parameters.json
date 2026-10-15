@@ -1,0 +1,31 @@
+{
+  "model": "SVM",
+  "params": {
+    "word_features": 50000,
+    "char_features": 100000,
+    "char_weight": 1.0,
+    "min_df": 1,
+    "max_df": 1.0,
+    "stop_words": "english",
+    "word_ngram": [
+      1,
+      2
+    ],
+    "char_ngram": [
+      3,
+      5
+    ],
+    "sublinear_tf": true,
+    "C": 0.5
+  },
+  "cv_run": "experiments\\runs\\20261008_tuning\\20261008_161413_SVM_cv5_cv_tuned_svm0",
+  "cv_accuracy": 0.9315959546831662,
+  "cv_macro_f1": 0.9317283638968664,
+  "cv_sd": 0.006498380672175181,
+  "epochs": null,
+  "selection_rule": "highest mean five-fold accuracy, then mean macro-F1; finite tested candidates",
+  "limitations": "candidate development and evaluation share this dataset; no independent labeled test",
+  "final_run": "experiments\\runs\\20261008_tuning\\20261008_162559_SVM_final_fulltrain_C_0.5_word_50000_char_100000_cw_1_df_1_stop_english__d9d83081",
+  "prediction_file": "experiments\\predictions\\20261008_tuning\\predictions.csv",
+  "submission_file": "data-Project1/predictions.csv"
+}

@@ -1,0 +1,5 @@
+time,model,params,train_acc,val_acc,val_macro_p,val_macro_r,val_macro_f1,val_weighted_f1,note
+20261008_160229,SVM,"C=0.5,word=50000,char=100000,cw=1,df=1,stop=english,wn=(1, 2),cn=(3, 5),tf=True,seed=42",0.9997,0.9362,0.9372,0.9362,0.9365,0.9365,20261008_160229_SVM_C_local_C_C_0.5_word_50000_char_100000_cw_1_df_1_stop_english__d9d83081
+20261008_160910,MLP-torch,"hidden=250,wd=3e-05,lr=0.001,batch_size=256,activation=relu,word=50000,char=0,cw=1,df=2,stop=english,wn=(1, 2),cn=(3, 5),tf=True,dropout=0.2,scheduler=none,seed=42,3seed,n=3",0.999,0.9242,0.9263,0.9244,0.9248,0.9247,20261008_160910_MLP-torch_3seed_F_finalist0
+20261008_161114,LR,"C=30.0,max_iter=500,word=50000,char=100000,cw=1,df=1,stop=english,wn=(1, 2),cn=(3, 5),tf=True,seed=42",0.9998,0.9294,0.9304,0.9295,0.9298,0.9298,20261008_161114_LR_G_LR_features_C_30.0_max_iter_500_word_50000_char_100000_cw_1_df_1_3b3cd917
+20261008_161154,MNB,"alpha=0.5,fit_prior=True,word=20000,char=0,cw=1,df=2,stop=english,wn=(1, 2),cn=(3, 5),tf=True,seed=42",0.9759,0.9084,0.9111,0.9086,0.909,0.9089,20261008_161154_MNB_H_NB_alpha_0.5_fit_prior_True_word_20000_char_0_cw_1_df_2_c472e430

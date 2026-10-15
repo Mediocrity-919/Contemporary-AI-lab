@@ -1,0 +1,962 @@
+{
+  "A": [
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 0.5,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.03
+      },
+      "acc": 0.9043419267299865,
+      "f1": 0.9047400908426037
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 0.5,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.1
+      },
+      "acc": 0.9219810040705563,
+      "f1": 0.9221495609718218
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 0.5,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.2
+      },
+      "acc": 0.9253731343283582,
+      "f1": 0.9257506386367302
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 0.5,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.9274084124830394,
+      "f1": 0.9277741037690825
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 0.5,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.5
+      },
+      "acc": 0.9280868385345997,
+      "f1": 0.9283684160914607
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 0.5,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 1.0
+      },
+      "acc": 0.9260515603799185,
+      "f1": 0.9262909932617802
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.03
+      },
+      "acc": 0.9097693351424695,
+      "f1": 0.9100709166489418
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.1
+      },
+      "acc": 0.9226594301221167,
+      "f1": 0.9229114316816153
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.2
+      },
+      "acc": 0.9294436906377205,
+      "f1": 0.9297261445132483
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.932157394843962,
+      "f1": 0.9323920598195979
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.5
+      },
+      "acc": 0.9308005427408412,
+      "f1": 0.9310646381039019
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 1.0
+      },
+      "acc": 0.9308005427408412,
+      "f1": 0.93104406793452
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 2.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.03
+      },
+      "acc": 0.9172320217096337,
+      "f1": 0.917588181280846
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 2.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.1
+      },
+      "acc": 0.9260515603799185,
+      "f1": 0.926321760296761
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 2.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.2
+      },
+      "acc": 0.9287652645861602,
+      "f1": 0.9292092901738631
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 2.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.926729986431479,
+      "f1": 0.9271187645504533
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 2.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.5
+      },
+      "acc": 0.9287652645861602,
+      "f1": 0.9290982889972323
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 2.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 1.0
+      },
+      "acc": 0.9274084124830394,
+      "f1": 0.927739796323614
+    }
+  ],
+  "B": [
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 30000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.932157394843962,
+      "f1": 0.9324074930959683
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 30000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.2
+      },
+      "acc": 0.9308005427408412,
+      "f1": 0.9310150190978262
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.932157394843962,
+      "f1": 0.9323920598195979
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 50000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.2
+      },
+      "acc": 0.9294436906377205,
+      "f1": 0.9297261445132483
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 100000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.9301221166892809,
+      "f1": 0.9304097165268903
+    },
+    {
+      "params": {
+        "word_features": 20000,
+        "char_features": 100000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.2
+      },
+      "acc": 0.932157394843962,
+      "f1": 0.9324846165424004
+    },
+    {
+      "params": {
+        "word_features": 50000,
+        "char_features": 30000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.932157394843962,
+      "f1": 0.9323903973210912
+    },
+    {
+      "params": {
+        "word_features": 50000,
+        "char_features": 30000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.2
+      },
+      "acc": 0.9308005427408412,
+      "f1": 0.9310959330530271
+    },
+    {
+      "params": {
+        "word_features": 50000,
+        "char_features": 50000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.9308005427408412,
+      "f1": 0.9310529940953621
+    },
+    {
+      "params": {
+        "word_features": 50000,
+        "char_features": 50000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.2
+      },
+      "acc": 0.9294436906377205,
+      "f1": 0.9297528117990057
+    },
+    {
+      "params": {
+        "word_features": 50000,
+        "char_features": 100000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.9328358208955224,
+      "f1": 0.9331338422042353
+    },
+    {
+      "params": {
+        "word_features": 50000,
+        "char_features": 100000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.2
+      },
+      "acc": 0.932157394843962,
+      "f1": 0.9325447585715876
+    }
+  ],
+  "C": [
+    {
+      "params": {
+        "word_features": 50000,
+        "char_features": 100000,
+        "char_weight": 1.0,
+        "min_df": 1,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.9328358208955224,
+      "f1": 0.933105741541908
+    },
+    {
+      "params": {
+        "word_features": 50000,
+        "char_features": 100000,
+        "char_weight": 1.0,
+        "min_df": 1,
+        "max_df": 1.0,
+        "stop_words": null,
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.9280868385345997,
+      "f1": 0.9285374941771801
+    },
+    {
+      "params": {
+        "word_features": 50000,
+        "char_features": 100000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.9328358208955224,
+      "f1": 0.9331338422042353
+    },
+    {
+      "params": {
+        "word_features": 50000,
+        "char_features": 100000,
+        "char_weight": 1.0,
+        "min_df": 2,
+        "max_df": 1.0,
+        "stop_words": null,
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.9280868385345997,
+      "f1": 0.9284497144207823
+    },
+    {
+      "params": {
+        "word_features": 50000,
+        "char_features": 100000,
+        "char_weight": 1.0,
+        "min_df": 3,
+        "max_df": 1.0,
+        "stop_words": "english",
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.9308005427408412,
+      "f1": 0.931005846613267
+    },
+    {
+      "params": {
+        "word_features": 50000,
+        "char_features": 100000,
+        "char_weight": 1.0,
+        "min_df": 3,
+        "max_df": 1.0,
+        "stop_words": null,
+        "word_ngram": [
+          1,
+          2
+        ],
+        "char_ngram": [
+          3,
+          5
+        ],
+        "sublinear_tf": true,
+        "C": 0.3
+      },
+      "acc": 0.9260515603799185,
+      "f1": 0.9263749641981814
+    }
+  ],
+  "cv": [
+    {
+      "label": "Word only",
+      "key": "word_reference",
+      "acc": 0.9265740359487509,
+      "sd": 0.007878525860856644,
+      "folds": [
+        0.9287652645861602,
+        0.9369063772048847,
+        0.9165535956580733,
+        0.9293957909029192,
+        0.9212491513917176
+      ],
+      "f1": 0.9267702767997965
+    },
+    {
+      "label": "Previous mix",
+      "key": "char_reference",
+      "acc": 0.9279318092006179,
+      "sd": 0.00687251621489921,
+      "folds": [
+        0.9287652645861602,
+        0.9362279511533242,
+        0.9172320217096337,
+        0.9273591310251188,
+        0.9300746775288526
+      ],
+      "f1": 0.9281220088455638
+    },
+    {
+      "label": "Tuned SVM 1",
+      "key": "tuned_svm0",
+      "acc": 0.9315959546831662,
+      "sd": 0.006498380672175181,
+      "folds": [
+        0.932157394843962,
+        0.9409769335142469,
+        0.9226594301221167,
+        0.9307535641547862,
+        0.9314324507807196
+      ],
+      "f1": 0.9317283638968664
+    },
+    {
+      "label": "Tuned SVM 2",
+      "key": "tuned_svm1",
+      "acc": 0.931324584262542,
+      "sd": 0.006497404501412316,
+      "folds": [
+        0.932157394843962,
+        0.9402985074626866,
+        0.9219810040705563,
+        0.9307535641547862,
+        0.9314324507807196
+      ],
+      "f1": 0.9314731425793287
+    },
+    {
+      "label": "MLP",
+      "key": "MLP",
+      "acc": 0.9267088921251915,
+      "sd": 0.007180453964562721,
+      "folds": [
+        0.9294436906377205,
+        0.937584803256445,
+        0.9219810040705563,
+        0.9192124915139172,
+        0.9253224711473184
+      ],
+      "f1": 0.9270510268524305
+    },
+    {
+      "label": "LR",
+      "key": "LR",
+      "acc": 0.9257593719976308,
+      "sd": 0.007340764741471528,
+      "folds": [
+        0.9280868385345997,
+        0.9369063772048847,
+        0.9172320217096337,
+        0.9239646978954514,
+        0.9226069246435845
+      ],
+      "f1": 0.9259574757085811
+    },
+    {
+      "label": "NB",
+      "key": "MNB",
+      "acc": 0.9085220076252692,
+      "sd": 0.009556452258823461,
+      "folds": [
+        0.9043419267299865,
+        0.9246947082767978,
+        0.9063772048846676,
+        0.8995247793618466,
+        0.9076714188730483
+      ],
+      "f1": 0.9089784874587361
+    }
+  ],
+  "mlp_runs": [
+    "experiments\\runs\\20261008_tuning\\20261008_160754_MLP-torch_F_MLP_training_hidden_250_wd_3e-05_lr_0.001_batch_size_256_activati_ff6d9ea1",
+    "experiments\\runs\\20261008_tuning\\20261008_160835_MLP-torch_multiseed_hidden_250_wd_3e-05_lr_0.001_batch_size_256_activati_87357ae9",
+    "experiments\\runs\\20261008_tuning\\20261008_160857_MLP-torch_multiseed_hidden_250_wd_3e-05_lr_0.001_batch_size_256_activati_def34040"
+  ],
+  "best_mlp_params": {
+    "word_features": 50000,
+    "char_features": 0,
+    "char_weight": 1.0,
+    "min_df": 2,
+    "max_df": 1.0,
+    "stop_words": "english",
+    "word_ngram": [
+      1,
+      2
+    ],
+    "char_ngram": [
+      3,
+      5
+    ],
+    "sublinear_tf": true,
+    "hidden": 250,
+    "wd": 3e-05,
+    "lr": 0.001,
+    "batch_size": 256,
+    "activation": "relu",
+    "max_epochs": 60,
+    "patience": 8,
+    "dropout": 0.2,
+    "scheduler": "none"
+  },
+  "selected": {
+    "model": "SVM",
+    "params": {
+      "word_features": 50000,
+      "char_features": 100000,
+      "char_weight": 1.0,
+      "min_df": 1,
+      "max_df": 1.0,
+      "stop_words": "english",
+      "word_ngram": [
+        1,
+        2
+      ],
+      "char_ngram": [
+        3,
+        5
+      ],
+      "sublinear_tf": true,
+      "C": 0.5
+    },
+    "cv_run": "experiments\\runs\\20261008_tuning\\20261008_161413_SVM_cv5_cv_tuned_svm0",
+    "cv_accuracy": 0.9315959546831662,
+    "cv_macro_f1": 0.9317283638968664,
+    "cv_sd": 0.006498380672175181,
+    "epochs": null,
+    "selection_rule": "highest mean five-fold accuracy, then mean macro-F1; finite tested candidates",
+    "limitations": "candidate development and evaluation share this dataset; no independent labeled test",
+    "final_run": "experiments\\runs\\20261008_tuning\\20261008_162559_SVM_final_fulltrain_C_0.5_word_50000_char_100000_cw_1_df_1_stop_english__d9d83081",
+    "prediction_file": "experiments\\predictions\\20261008_tuning\\predictions.csv",
+    "submission_file": "data-Project1/predictions.csv"
+  }
+}

@@ -1,0 +1,31 @@
+# Local Python/editor files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+.env
+.env.*
+.vscode/
+.idea/
+.DS_Store
+__MACOSX/
+
+# Course input and generated intermediate data
+/data-Project1/train_data.csv
+/data-Project1/test_data_unlabeled.csv
+/experiments/data_processed/
+
+# Models, caches, logs and temporary report reviews
+*.joblib
+*.pth
+*.pt
+*.pkl
+*.log
+*.tmp
+*.bak
+/tmp/
+/experiments/runs/
+/experiments/predictions/
+
+# Selected small configs/metrics/history are explicitly tracked as evidence.
+# Keep the submitted CSV, result tables, report and figures in version control.
