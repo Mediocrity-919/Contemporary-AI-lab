@@ -16,7 +16,7 @@ from reportlab.platypus import Image, PageBreak, Paragraph, SimpleDocTemplate, S
 
 BASE = Path(__file__).resolve().parents[3]
 SOURCE = BASE / '实验报告.md'
-OUT = BASE / 'experiments/reports/20261014_report/实验报告_两页版.pdf'
+OUT = BASE / 'experiments/reports/20261014_report/实验报告.pdf'
 pdfmetrics.registerFont(TTFont('Body', 'C:/Windows/Fonts/simsun.ttc', subfontIndex=0))
 pdfmetrics.registerFont(TTFont('Bold', 'C:/Windows/Fonts/simhei.ttf'))
 pdfmetrics.registerFontFamily('Body', normal='Body', bold='Bold', italic='Body', boldItalic='Bold')
