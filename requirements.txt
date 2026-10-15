@@ -6,6 +6,3 @@ joblib==1.5.3
 threadpoolctl==3.6.0
 torch==2.11.0
 matplotlib>=3.8,<4
-reportlab>=4,<5
-pypdf>=5,<7
-Pillow>=10,<13

@@ -27,5 +27,6 @@
   "limitations": "candidate development and evaluation share this dataset; no independent labeled test",
   "final_run": "experiments\\runs\\20261008_tuning\\20261008_162559_SVM_final_fulltrain_C_0.5_word_50000_char_100000_cw_1_df_1_stop_english__d9d83081",
   "prediction_file": "experiments\\predictions\\20261008_tuning\\predictions.csv",
-  "submission_file": "data-Project1/predictions.csv"
+  "submission_file": "prediction.csv",
+  "original_submission_file": "data-Project1/predictions.csv"
 }

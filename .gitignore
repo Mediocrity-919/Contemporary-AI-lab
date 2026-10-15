@@ -13,7 +13,11 @@ __MACOSX/
 # Course input and generated intermediate data
 /data-Project1/train_data.csv
 /data-Project1/test_data_unlabeled.csv
+/data-Project1/predictions.csv
 /experiments/data_processed/
+
+# PDF typesetting tools stay local; experiment plotting scripts are in tools/tuning.
+/data-Project1/tools/report/
 
 # Models, caches, logs and temporary report reviews
 *.joblib
