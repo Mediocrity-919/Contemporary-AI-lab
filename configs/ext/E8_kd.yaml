@@ -1,0 +1,10 @@
+# E8 知识蒸馏正式实验；对照组为 F（同种子）。
+inherit: ../cnn/F_final.yaml
+meta:
+  name: E8_kd
+loss:
+  kd:
+    teacher_config: configs/arch/E6_resnet.yaml
+    teacher_seed: best
+    T: "${kd_T}"
+    alpha: "${kd_alpha}"

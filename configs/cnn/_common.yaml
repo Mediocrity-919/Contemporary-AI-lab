@@ -1,0 +1,5 @@
+# 自定义 CNN 正式实验的公共设置：轮数与学习率来自决策文件（阶段 1、2 确定）。
+inherit: ../base.yaml
+train:
+  epochs: "${epochs_32}"
+  lr: "${cnn_lr}"

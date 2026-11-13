@@ -1,0 +1,11 @@
+# 迁移学习公共设置：ResNet-18 ImageNet 结构，224 输入（32×32 增强后在 GPU 上放大），ImageNet 归一化。
+# 增强与损失沿用配方 F。
+inherit: ../cnn/F_final.yaml
+data:
+  input_size: 224
+  norm: imagenet
+model:
+  arch: resnet18_imagenet
+  attention: none
+train:
+  epochs: "${epochs_224}"

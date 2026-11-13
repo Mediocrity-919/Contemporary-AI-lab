@@ -1,0 +1,6 @@
+# E7b 正式实验（种子 0,1,2），学习率来自调参结果。
+inherit: _ft32.yaml
+meta:
+  name: E7b_ft32
+train:
+  lr: "${ft32_lr}"

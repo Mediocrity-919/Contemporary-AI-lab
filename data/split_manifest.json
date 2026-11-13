@@ -1,0 +1,118 @@
+{
+  "dataset": "CIFAR-10",
+  "source_url": "https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz",
+  "source_page": "https://www.cs.toronto.edu/~kriz/cifar.html",
+  "archive_md5": "c58f30108f718f92721af3b95e74349a",
+  "expected_archive_md5": "c58f30108f718f92721af3b95e74349a",
+  "seed": 42,
+  "split_method": "Per-class random 90/10 split of official training set",
+  "official_test_preserved": true,
+  "train_val_source_indices_disjoint": true,
+  "train_val_source_indices_cover_all_50000": true,
+  "class_names": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ],
+  "torch_version": "2.11.0+cu128",
+  "torchvision_version": "0.26.0+cu128",
+  "splits": {
+    "train": {
+      "file": "train.pt",
+      "samples": 45000,
+      "shape": [
+        45000,
+        3,
+        32,
+        32
+      ],
+      "dtype": "uint8",
+      "pixel_range": [
+        0,
+        255
+      ],
+      "source_split": "official_train",
+      "samples_per_class": [
+        4500,
+        4500,
+        4500,
+        4500,
+        4500,
+        4500,
+        4500,
+        4500,
+        4500,
+        4500
+      ],
+      "size_bytes": 138962273,
+      "sha256": "c95c91a4125c8a4ce46ee472992ddb71f64ae8cf22dabdc9941210a881f1c573"
+    },
+    "val": {
+      "file": "val.pt",
+      "samples": 5000,
+      "shape": [
+        5000,
+        3,
+        32,
+        32
+      ],
+      "dtype": "uint8",
+      "pixel_range": [
+        0,
+        255
+      ],
+      "source_split": "official_train",
+      "samples_per_class": [
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "size_bytes": 15442273,
+      "sha256": "fa1ea208ef129ec1ca93922eecacc7ee5146f2c1be0cbd3bbf2eaf7ffdb8d304"
+    },
+    "test": {
+      "file": "test.pt",
+      "samples": 10000,
+      "shape": [
+        10000,
+        3,
+        32,
+        32
+      ],
+      "dtype": "uint8",
+      "pixel_range": [
+        0,
+        255
+      ],
+      "source_split": "official_test",
+      "samples_per_class": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "size_bytes": 30882273,
+      "sha256": "ceb2db38c09d313cee620f06992b9795ae4537935c50d22193d44ded023ab615"
+    }
+  }
+}

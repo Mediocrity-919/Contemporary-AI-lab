@@ -1,0 +1,6 @@
+# P2 扩展：在配方 F 上去掉 BatchNorm（学习率沿用有 BN 时的结果，可能不稳定）。
+inherit: ../cnn/F_final.yaml
+meta:
+  name: X_no_bn
+model:
+  batchnorm: false

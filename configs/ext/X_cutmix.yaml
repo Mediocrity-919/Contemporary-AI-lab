@@ -1,0 +1,6 @@
+# P2 扩展：在配方 F 上训练时加入 CutMix（α=1）。
+inherit: ../cnn/F_final.yaml
+meta:
+  name: X_cutmix
+data:
+  mix: cutmix

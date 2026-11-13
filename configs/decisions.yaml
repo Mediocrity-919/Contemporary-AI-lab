@@ -1,0 +1,14 @@
+epochs_32: 100
+epochs_224: 15
+cnn_lr: 0.1
+aug_best: strong
+attention_best: se
+loss_best: ce
+cnn_lr_F: 0.1
+resnet_lr: 0.1
+ft_lr: 0.003
+s224_lr: 0.05
+lp_lr: 0.03
+ft32_lr: 0.003
+kd_T: 4.0
+kd_alpha: 0.9

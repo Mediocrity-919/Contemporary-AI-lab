@@ -1,0 +1,59 @@
+# 全部实验共享的默认配置（plan.md 第 3、4 节）。
+# 各实验配置用 `inherit:` 继承本文件或其他配置，只写不同的字段。
+# 形如 "${key}" 的值从 configs/decisions.yaml 读取；该值尚未确定（null）时拒绝运行。
+# 配置哈希不包含 meta 和 system，二者不影响训练结果。
+
+meta:
+  name: base
+  description: ""
+  seeds: [0, 1, 2]          # 正式实验种子；调参统一用 [100]
+  sweep: null               # 扫参：{点路径: [取值, ...]}，多个键取笛卡尔积
+
+system:
+  num_workers: 6            # DataLoader 进程数（不影响结果：增强随机数与 worker 数无关）
+  eval_batch_size: 500
+  output_root: outputs/runs
+
+data:
+  root: data
+  aug: basic                # none | basic | strong
+  input_size: 32            # 32 或 224（224 时先增强再在 GPU 上双线性放大）
+  norm: cifar               # cifar（训练集统计量）| imagenet
+  mix: none                 # none | mixup | cutmix（P2）
+  mix_alpha: 1.0
+  clean_train_subset: 5000  # 每轮在其上评估的固定训练子集（eval 模式、无增强）
+
+model:
+  arch: ourcnn              # ourcnn | resnet18_cifar | resnet18_imagenet
+  num_classes: 10
+  attention: none           # none | se | cbam（仅 ourcnn）
+  se_reduction: 16
+  batchnorm: true           # 仅 ourcnn
+  dropout: 0.3              # 仅 ourcnn
+  pretrained: false         # 仅 resnet18_imagenet
+  freeze_backbone: false    # true：只训练分类层 fc，主干保持 eval 模式
+
+loss:
+  type: ce                  # ce | ls
+  smoothing: 0.1            # 仅 ls
+  kd: null                  # 知识蒸馏：{teacher_config, teacher_seed, T, alpha}
+
+train:
+  epochs: 100
+  batch_size: 128
+  lr: 0.05                  # 主干学习率
+  head_lr_mult: 1.0         # 分类层学习率 = lr × head_lr_mult
+  momentum: 0.9
+  nesterov: true
+  weight_decay: 5.0e-4      # 只作用于卷积 / 全连接权重，BN 参数和 bias 不衰减
+  scheduler: cosine         # cosine | constant | plateau | step | onecycle（按 batch 或按轮更新）
+  plateau_factor: 0.1
+  plateau_patience: 5
+  step_milestones: [0.5, 0.75]
+  step_gamma: 0.1
+  early_stopping: false     # true：真正提前停止；false：影子模式，只记录触发点并保存 es_best.pt
+  es_patience: 15           # 监控验证准确率
+  amp: true
+  channels_last: true
+  deterministic: true       # 逐位可复现；实测只慢 3–5%（scripts/benchmark_speed.py），因此默认开启
+  max_steps: null           # 仅冒烟测试使用

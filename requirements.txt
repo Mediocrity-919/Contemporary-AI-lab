@@ -1,0 +1,10 @@
+# 实验环境：Python 3.10，CUDA 12.8（PyTorch 请按本机 CUDA 版本从 https://pytorch.org 安装对应的 wheel）
+torch==2.11.0
+torchvision==0.26.0
+numpy==2.2.6
+scipy==1.15.3
+scikit-learn==1.7.2
+matplotlib==3.10.9
+PyYAML==6.0.3
+ultralytics-thop==2.2.3
+pytest==9.2.0

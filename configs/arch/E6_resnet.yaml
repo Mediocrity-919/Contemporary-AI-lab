@@ -1,0 +1,9 @@
+# E6 架构比较：ResNet-18 CIFAR 版（3×3 首层、无最大池化），从头训练，配方 F。
+inherit: ../cnn/F_final.yaml
+meta:
+  name: E6_resnet
+model:
+  arch: resnet18_cifar
+  attention: none
+train:
+  lr: "${resnet_lr}"

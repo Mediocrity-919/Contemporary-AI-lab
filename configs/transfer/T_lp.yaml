@@ -1,0 +1,10 @@
+# 调参：3 点学习率网格，种子 100（各模型族调参预算相同）。
+# 2026-11-09：原网格 {0.03, 0.1, 0.3} 的最优点 0.03 在下边缘，按规则 3 补 1 个点 0.01（plan.md 变更记录 v1.5）。
+# 完成后运行：python -m src.select_decisions lr configs/transfer/T_lp.yaml lp_lr
+inherit: _lp.yaml
+meta:
+  name: T_lp
+  seeds: [100]
+  sweep:
+    train.lr: [0.01, 0.03, 0.1, 0.3]
+  edge_extended: true

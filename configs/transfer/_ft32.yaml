@@ -1,0 +1,4 @@
+# E7b：与 FT 相同，但直接输入 32×32（不放大），检验输入分辨率的影响。
+inherit: _ft.yaml
+data:
+  input_size: 32

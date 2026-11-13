@@ -1,0 +1,6 @@
+# E5 逐个去掉组件：F 去掉注意力。若 F 本来就没有注意力，与 F 完全相同，自动复用。
+inherit: F_final.yaml
+meta:
+  name: E5_minus_attention
+model:
+  attention: none

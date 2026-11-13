@@ -1,0 +1,7 @@
+# E4-D 实现检查：真正开启早停跑 1 个种子，确认停止轮次与 E4-C 的影子记录一致。
+inherit: E4_C_plateau.yaml
+meta:
+  name: E4_D_plateau_es_check
+  seeds: [0]
+train:
+  early_stopping: true

@@ -1,0 +1,6 @@
+# P2 扩展：在配方 F 上去掉 Dropout。
+inherit: ../cnn/F_final.yaml
+meta:
+  name: X_no_dropout
+model:
+  dropout: 0.0

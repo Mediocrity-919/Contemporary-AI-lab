@@ -1,0 +1,11 @@
+# F：自定义 CNN 的最终配置，由 E1–E3 按 plan.md 5.4 的规则选出（与 C0–C4 中某一个完全相同，自动复用）。
+# 也是 E4 调度对照中的 B 组（Cosine，影子早停）。
+inherit: _common.yaml
+meta:
+  name: F_final
+data:
+  aug: "${aug_best}"
+model:
+  attention: "${attention_best}"
+loss:
+  type: "${loss_best}"

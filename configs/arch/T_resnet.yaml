@@ -1,0 +1,13 @@
+# E6 调参：ResNet-18 CIFAR 版，配方 F（增强、损失、调度、轮数相同），3 点学习率网格。
+# 2026-11-08：原网格 {0.025, 0.05, 0.1} 的最优点 0.1 在上边缘，按规则 3 补 1 个点 0.2（plan.md 变更记录 v1.4）。
+# 完成后运行：python -m src.select_decisions lr configs/arch/T_resnet.yaml resnet_lr
+inherit: ../cnn/F_final.yaml
+meta:
+  name: T_resnet
+  seeds: [100]
+  sweep:
+    train.lr: [0.025, 0.05, 0.1, 0.2]
+  edge_extended: true
+model:
+  arch: resnet18_cifar
+  attention: none

@@ -1,0 +1,9 @@
+# 阶段 1 预实验：参考配置 R1（OurCNN + basic + ce + cosine），lr=0.05，跑满 100 轮，用于确定 epochs_32。
+# 若最终 epochs_32 = 100，本运行与 T_cnn 中 lr=0.05 的变体完全相同，会被自动复用。
+inherit: ../base.yaml
+meta:
+  name: P0_pilot_R1
+  seeds: [100]
+train:
+  epochs: 100
+  lr: 0.05

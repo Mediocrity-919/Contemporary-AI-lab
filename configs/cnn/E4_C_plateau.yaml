@@ -1,0 +1,7 @@
+# E4-C：ReduceLROnPlateau（验证准确率连续 5 轮不升则学习率 ×0.1）。
+# E4-D（Plateau + 早停 patience 15）= 本组的影子早停结果（es_best.pt），两组来自同一次训练、完全配对。
+inherit: F_final.yaml
+meta:
+  name: E4_C_plateau
+train:
+  scheduler: plateau

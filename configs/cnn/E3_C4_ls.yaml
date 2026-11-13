@@ -1,0 +1,11 @@
+# E3 损失函数：在 E2 选定的结构上换成标签平滑（ε=0.1）。对照组为同一结构的交叉熵（自动复用）。
+# 完成后运行：python -m src.select_decisions loss
+inherit: _common.yaml
+meta:
+  name: E3_C4_ls
+data:
+  aug: "${aug_best}"
+model:
+  attention: "${attention_best}"
+loss:
+  type: ls

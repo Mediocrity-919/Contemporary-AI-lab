@@ -1,0 +1,9 @@
+# E6 调参：OurCNN 在配方 F 下重新调学习率（与 ResNet 调参预算相同：3 点 × 种子 100）。
+# 网格以阶段 2 选出的 cnn_lr = 0.1 为中心（阶段 2 中 0.2 已比 0.1 差），见 plan.md 变更记录 v1.3。
+# 完成后运行：python -m src.select_decisions lr configs/arch/T_cnn_F.yaml cnn_lr_F
+inherit: ../cnn/F_final.yaml
+meta:
+  name: T_cnn_F
+  seeds: [100]
+  sweep:
+    train.lr: [0.05, 0.1, 0.2]

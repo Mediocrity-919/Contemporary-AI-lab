@@ -1,0 +1,19 @@
+# 阶段 1 预实验：预训练 + 全部微调，主干 lr=0.003（分类层 ×10），跑 20 轮，用于确定 epochs_224。
+# 此时配方 F 尚未确定，所以直接写明设置；用强增强（收敛最慢的一档），定出的轮数对各档增强都偏保守。
+# 首次运行会从 download.pytorch.org 下载官方 ResNet-18 权重（约 45MB）。
+inherit: ../base.yaml
+meta:
+  name: P0_pilot_ft
+  seeds: [100]
+data:
+  aug: strong
+  input_size: 224
+  norm: imagenet
+model:
+  arch: resnet18_imagenet
+  pretrained: true
+train:
+  epochs: 20
+  lr: 0.003
+  head_lr_mult: 10.0
+  weight_decay: 1.0e-4

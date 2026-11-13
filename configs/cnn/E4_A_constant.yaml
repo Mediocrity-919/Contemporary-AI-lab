@@ -1,0 +1,6 @@
+# E4-A：固定学习率（不调度），影子早停记录触发点。
+inherit: F_final.yaml
+meta:
+  name: E4_A_constant
+train:
+  scheduler: constant

@@ -1,0 +1,16 @@
+# E8 知识蒸馏调参：教师 = E6 ResNet-18 CIFAR 版中验证集最好的种子（固定，32 输入，与学生看同一增强图）。
+# 学生 = OurCNN，配方 F。网格 T ∈ {2,4} × α ∈ {0.5,0.9}，种子 100。
+# 完成后运行：python -m src.select_decisions kd configs/ext/T_kd.yaml
+inherit: ../cnn/F_final.yaml
+meta:
+  name: T_kd
+  seeds: [100]
+  sweep:
+    loss.kd.T: [2.0, 4.0]
+    loss.kd.alpha: [0.5, 0.9]
+loss:
+  kd:
+    teacher_config: configs/arch/E6_resnet.yaml
+    teacher_seed: best
+    T: 4.0
+    alpha: 0.9

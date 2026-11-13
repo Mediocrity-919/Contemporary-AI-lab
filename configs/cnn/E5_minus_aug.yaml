@@ -1,0 +1,6 @@
+# E5 逐个去掉组件：F 去掉数据增强（降为 none）。
+inherit: F_final.yaml
+meta:
+  name: E5_minus_aug
+data:
+  aug: none

@@ -1,0 +1,6 @@
+# S224：与 FT 同结构、同输入尺寸、同预处理、同轮数，但随机初始化（对照组）。
+inherit: _common.yaml
+model:
+  pretrained: false
+train:
+  weight_decay: 5.0e-4

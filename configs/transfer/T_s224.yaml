@@ -1,0 +1,8 @@
+# 调参：3 点学习率网格，种子 100（各模型族调参预算相同）。
+# 完成后运行：python -m src.select_decisions lr configs/transfer/T_s224.yaml s224_lr
+inherit: _s224.yaml
+meta:
+  name: T_s224
+  seeds: [100]
+  sweep:
+    train.lr: [0.025, 0.05, 0.1]

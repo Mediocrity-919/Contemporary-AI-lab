@@ -1,0 +1,6 @@
+# E6 架构比较：OurCNN（配方 F，学习率为配方 F 下重调的结果；与 F 相同时自动复用）。
+inherit: ../cnn/F_final.yaml
+meta:
+  name: E6_ourcnn
+train:
+  lr: "${cnn_lr_F}"

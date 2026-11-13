@@ -1,0 +1,11 @@
+# 数据文件（运行 prepare_data.py 重新生成）
+data/raw/
+data/*.pt
+
+# 训练产物、日志与模型（约 7GB，可按 README 重新生成）
+outputs/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+.pytest_cache/

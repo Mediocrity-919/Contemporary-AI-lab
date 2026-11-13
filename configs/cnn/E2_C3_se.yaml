@@ -1,0 +1,9 @@
+# E2 注意力：最优增强档 + SE。对照组为同一增强档、不加 SE（即 E1 中对应配置，自动复用）。
+# 完成后运行：python -m src.select_decisions attention
+inherit: _common.yaml
+meta:
+  name: E2_C3_se
+data:
+  aug: "${aug_best}"
+model:
+  attention: se

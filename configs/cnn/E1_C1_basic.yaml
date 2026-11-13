@@ -1,0 +1,6 @@
+# E1 数据增强：基础增强（RandomCrop + 翻转），即参考配置 R1。其余同参考配置 R1。
+inherit: _common.yaml
+meta:
+  name: E1_C1_basic
+data:
+  aug: basic

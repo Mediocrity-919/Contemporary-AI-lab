@@ -1,0 +1,12 @@
+# T-CNN：自定义 CNN 学习率调参（plan.md 5.2）。参考配置 R1，3 点网格，调参种子 100。
+# 完成后运行：python -m src.select_decisions lr configs/cnn/T_cnn.yaml cnn_lr
+# 2026-11-07：原网格 {0.025, 0.05, 0.1} 的最优点 0.1 在上边缘，按规则 3 沿该方向补 1 个点 0.2（plan.md 变更记录 v1.2）。
+inherit: ../base.yaml
+meta:
+  name: T_cnn
+  seeds: [100]
+  sweep:
+    train.lr: [0.025, 0.05, 0.1, 0.2]
+  edge_extended: true
+train:
+  epochs: "${epochs_32}"

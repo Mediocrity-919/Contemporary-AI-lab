@@ -1,0 +1,8 @@
+# 调参：3 点学习率网格，种子 100（各模型族调参预算相同）。
+# 完成后运行：python -m src.select_decisions lr configs/transfer/T_ft.yaml ft_lr
+inherit: _ft.yaml
+meta:
+  name: T_ft
+  seeds: [100]
+  sweep:
+    train.lr: [0.001, 0.003, 0.01]

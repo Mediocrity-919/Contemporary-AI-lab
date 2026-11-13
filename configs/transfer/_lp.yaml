@@ -1,0 +1,7 @@
+# LP：ImageNet 预训练 + 冻结主干（主干始终 eval 模式，BN 统计量不更新），只训练分类层。
+inherit: _common.yaml
+model:
+  pretrained: true
+  freeze_backbone: true
+train:
+  weight_decay: 1.0e-4

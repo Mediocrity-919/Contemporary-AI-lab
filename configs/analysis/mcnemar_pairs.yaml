@@ -1,0 +1,8 @@
+# 事先确定的 McNemar 比较对（plan.md 6.1）。a、b 为配置文件；按种子配对比较。
+pairs:
+  - {label: "C0 无增强 vs F 最终配置", a: configs/cnn/E1_C0_none.yaml, b: configs/cnn/F_final.yaml}
+  - {label: "OurCNN vs ResNet-18 CIFAR", a: configs/arch/E6_ourcnn.yaml, b: configs/arch/E6_resnet.yaml}
+  - {label: "FT vs S224", a: configs/transfer/E7_ft.yaml, b: configs/transfer/E7_s224.yaml}
+  - {label: "FT vs LP", a: configs/transfer/E7_ft.yaml, b: configs/transfer/E7_lp.yaml}
+  # P2 完成后取消注释：
+  # - {label: "蒸馏学生 vs F", a: configs/ext/E8_kd.yaml, b: configs/cnn/F_final.yaml}

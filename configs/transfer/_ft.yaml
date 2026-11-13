@@ -1,0 +1,7 @@
+# FT：ImageNet 预训练 + 全部参数微调；分类层学习率为主干的 10 倍。
+inherit: _common.yaml
+model:
+  pretrained: true
+train:
+  head_lr_mult: 10.0
+  weight_decay: 1.0e-4
