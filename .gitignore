@@ -1,35 +1,10 @@
-# Local Python/editor files
 __pycache__/
 *.py[cod]
-.ipynb_checkpoints/
 .venv/
-.env
-.env.*
-.vscode/
+venv/
+.pytest_cache/
 .idea/
+.vscode/
+tmp/
+Thumbs.db
 .DS_Store
-__MACOSX/
-
-# Course input and generated intermediate data
-/data-Project1/train_data.csv
-/data-Project1/test_data_unlabeled.csv
-/data-Project1/predictions.csv
-/experiments/data_processed/
-
-# PDF typesetting tools stay local; experiment plotting scripts are in tools/tuning.
-/data-Project1/tools/report/
-
-# Models, caches, logs and temporary report reviews
-*.joblib
-*.pth
-*.pt
-*.pkl
-*.log
-*.tmp
-*.bak
-/tmp/
-/experiments/runs/
-/experiments/predictions/
-
-# Selected small configs/metrics/history are explicitly tracked as evidence.
-# Keep the submitted CSV, result tables, report and figures in version control.

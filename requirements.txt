@@ -1,8 +1,5 @@
-numpy==2.2.6
-pandas==2.3.3
-scipy==1.15.3
-scikit-learn==1.7.2
-joblib==1.5.3
-threadpoolctl==3.6.0
-torch==2.11.0
-matplotlib>=3.8,<4
+# 四道题的算法和测试只用 Python 标准库 (Python >= 3.10), 不需要安装任何包.
+# 以下仅用于重新生成报告插图和 PDF:
+matplotlib>=3.8      # tests/make_figures.py
+pypdf>=4.0           # tests/build_report.py 检查页数 (可选)
+# 另需: pandoc (命令行工具) 和 Chrome 或 Edge 浏览器, 供 tests/build_report.py 生成 PDF

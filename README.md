@@ -1,48 +1,49 @@
-# Lab1：新闻文本分类
+# Lab2 搜索算法
 
-代码位于 [`lab1` 分支](https://github.com/Mediocrity-919/Contemporary-AI-lab/tree/lab1)。比较 NB、LinearSVC、LR 和 PyTorch MLP，采用 TF-IDF 表示。
+## 环境与运行
+- Python 3.10 及以上 (在 3.14.2 上测试). 四道题的算法和测试只用标准库;
+  重新生成插图和 PDF 需要的依赖见 `requirements.txt`.
+- 在 lab2 根目录运行:
+  - `python tests/test_all.py`: PDF 样例 + 边界情况测试, 全部通过时退出码为 0.
+  - `python tests/experiments.py`: 四道题的基础对照实验 (节点数 + 计时).
+  - `python tests/innovation.py`: 拓展实验 (大树访问顺序、大图启发函数/平局打破、距离矩阵缓存).
+  - `python tests/order_check.py`: T4 在 H=4 时不同宝藏访问顺序的对照.
+  - `python tests/verify_independent.py`: 用独立实现的 Dijkstra / 完整回传对拍 (随机迷宫、地形、博弈树).
+  - `python src/alphabeta.py tree.json`: 读取 PDF 格式的 JSON 博弈树, 输出 MAX 的最优值 (不给文件时用 PDF 样例).
+  - `python src/treasure_game.py`: 打印 T4 的 6x6 距离矩阵, 以及 H=2/4 下 Minimax 与 Alpha-Beta 的结果.
+  - `python tests/report_data.py`: 生成实验报告的全部数据, 写入 `results/report_data.json` (约 15 秒).
+  - `python tests/make_figures.py`: 根据上面的数据生成 `figures/` 下的插图 (需要 matplotlib).
+- 实验报告: `report.pdf` (5 页, 由 `report.md` 生成; 重新生成运行 `python tests/build_report.py`, 需要 pandoc 和 Chrome/Edge).
+- `report_full.md`: 不限篇幅的完整版分析 (含全部推导和表格), 作底稿保留.
+- 中文输出乱码时加 `-X utf8`, 例如 `python -X utf8 tests/experiments.py`.
 
-最终方案：LinearSVC，C=0.5，词50k＋字符100k，min_df=1。固定验证 accuracy **93.62%**、macro-F1 **0.9365**；同划分五折 accuracy **93.16% ± 0.65个百分点**、macro-F1 **0.9317**。
+## 目录
+- `src/astar_maze.py`: T1 迷宫 A*.
+- `src/astar_weighted.py`: T2 加权地形 A* (T4 距离矩阵也用它).
+- `src/alphabeta.py`: T3 Minimax / Alpha-Beta.
+- `src/treasure_game.py`: T4 地图、博弈状态、距离矩阵与博弈搜索 (支持动态排序 `dynamic=True`、Minimax 状态缓存 `memo=True`).
+- `tests/bench.py`: 计时工具 (perf_counter_ns, 预热后取中位数).
 
-最终提交文件位于根目录：[`prediction.csv`](prediction.csv)（2457行，列 `id,target`）。
+## 接口
+- `astar_maze(start, end, grid) -> List[Tuple[int,int]]`, 无解返回 `[]`.
+- `astar_weighted(start, end, grid) -> int`, 无解返回 `-1`.
+- `alphabeta(root) -> int`, 根为 MAX, 子节点从左到右访问.
+- `solve_tree_json(data) -> int`: 接收 PDF 的 JSON 输入 (字符串或字典), 按 `is_maximizing_player` 判断 MAX/MIN.
+- `best_first_move(H, use_ab=True) -> {'best_target', 'best_value'}`: 与 PDF 的输出格式一致.
+- `solve_game(H) -> {'best_target', 'best_value', 'counter', 'matrix'}`: 额外返回计数器和距离矩阵, 供实验使用.
+- 对照实验用的可选参数: `astar_maze(..., h_func, tie_break)`, `astar_weighted(..., h_scale, h_func, tie_break)`,
+  `solve_game(H, use_ab, order, dynamic, memo, tmap)`.
 
-## 代码入口
+## 规则与假设
+- 起点或终点越界、在障碍上、地图为空: T1 返回 `[]`, T2 返回 `-1`.
+- T2: 进入代价 = 地形值, S/A/B/T 格为 1, 终点格为 'E' 时进入代价为 0. 不支持负代价.
+- T2 启发函数: m = 除 X、E 和起点格外的最小进入代价, d = 曼哈顿距离.
+  终点为 'E' 时 h = m·max(d−1, 0) (最后一步免费); 终点为普通格时 h = m·d.
+  地图含 0 代价格时 m = 0, h 退化为 0.
+- T4: 宝藏价值按 PDF 第 14 页表格: T1=9, T2=6, T3=7, T4=7. 不可达的宝藏不能选.
 
-| 文件 | 用途 |
-|---|---|
-| [`data-Project1/train_experiment.py`](data-Project1/train_experiment.py) | 四模型训练、验证与预测的核心代码，支持 CLI |
-| [`data-Project1/prepare_data.py`](data-Project1/prepare_data.py) | 数据清洗与固定分层划分 |
-| [`data-Project1/tools/tuning/run_tuning.py`](data-Project1/tools/tuning/run_tuning.py) | 分步调参、多种子、五折选模与全量重训 |
-| [`data-Project1/tools/revision/revise_experiments.py`](data-Project1/tools/revision/revise_experiments.py) | 清洗和初期特征对照实验 |
-
-## 运行
-
-在项目根目录打开 Anaconda Prompt，使用 Python 3.10。已有实验环境可直接激活 `pytorch_env`；新环境先安装 `requirements.txt`。MLP 可用 CUDA 或 CPU，原实验使用 PyTorch 2.11.0+cu128。
-
-课程原始数据不上传。请将 `train_data.csv` 和 `test_data_unlabeled.csv` 放入 `data-Project1/`。
-
-```cmd
-conda activate pytorch_env
-python data-Project1/prepare_data.py --seed 42
-python data-Project1/train_experiment.py --model SVM --batch reproduce_final --C 0.5 --word-features 50000 --char-features 100000 --char-weight 1 --min-df 1 --seed 42 --full-train --stage final_fulltrain
-python -c "from pathlib import Path; import shutil; p=max(Path('experiments/predictions/reproduce_final').glob('*.csv'), key=lambda p:p.stat().st_mtime); shutil.copyfile(p, 'prediction.csv')"
-```
-
-训练输出保存在 `experiments/predictions/reproduce_final/` 和相应 runs 目录；最后一条命令将新预测复制为根目录的 `prediction.csv`。当前提交文件已使用全部7368条训练后生成，与归档结果一致。
-
-需要完整重跑新版分步调参时，在清洗后依次执行：
-
-```cmd
-python data-Project1/tools/revision/revise_experiments.py
-python data-Project1/tools/tuning/run_tuning.py
-```
-
-完整调参沿用原 `pytorch_env` 路径检查，耗时明显长于只复现最终模型。历史初次调参保留结果表，旧临时搜索入口未完整保留。
-
-## 文件
-
-- `data-Project1/tools/tuning/plot_history.py`、`plot_results.py`：实验参数曲线、MLP 训练曲线与五折结果绘图。
-- `experiments/tables/`：历史及新版结果；`experiments/runs/20261008_tuning/`：少量选中配置、指标与 MLP 曲线证据。
-- `实验报告.md`、`experiments/reports/20261014_report/`：报告、两页 PDF 和三张实验结果图。
-
-五折结果为开发候选后的非嵌套比较；测试集无标签，未报告测试 accuracy。模型权重、原始/处理后数据、PDF 排版工具、缓存和临时核验文件均不上传。
+## 统计口径
+- A* `expanded`: 从优先队列弹出并关闭的节点数, 含终点.
+- 博弈树 `visited`: 递归访问的节点数.
+- `cutoffs`: alpha ≥ beta 的触发次数 (含在最后一个子节点之后才触发的情况).
+- `effective_cutoffs`: 真正跳过了后续子节点的剪枝次数; `skipped_children`: 被跳过的子树个数.
