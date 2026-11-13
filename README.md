@@ -2,7 +2,7 @@
 
 ## 环境与运行
 - Python 3.10 及以上 (在 3.14.2 上测试). 四道题的算法和测试只用标准库;
-  重新生成插图和 PDF 需要的依赖见 `requirements.txt`.
+  重新生成实验插图需要的依赖见 `requirements.txt`.
 - 在 lab2 根目录运行:
   - `python tests/test_all.py`: PDF 样例 + 边界情况测试, 全部通过时退出码为 0.
   - `python tests/experiments.py`: 四道题的基础对照实验 (节点数 + 计时).
@@ -13,7 +13,7 @@
   - `python src/treasure_game.py`: 打印 T4 的 6x6 距离矩阵, 以及 H=2/4 下 Minimax 与 Alpha-Beta 的结果.
   - `python tests/report_data.py`: 生成实验报告的全部数据, 写入 `results/report_data.json` (约 15 秒).
   - `python tests/make_figures.py`: 根据上面的数据生成 `figures/` 下的插图 (需要 matplotlib).
-- 实验报告: `report.pdf` (5 页, 由 `report.md` 生成; 重新生成运行 `python tests/build_report.py`, 需要 pandoc 和 Chrome/Edge).
+- 实验报告: `report.md` 和 `report.pdf` (5 页).
 - `report_full.md`: 不限篇幅的完整版分析 (含全部推导和表格), 作底稿保留.
 - 中文输出乱码时加 `-X utf8`, 例如 `python -X utf8 tests/experiments.py`.
 

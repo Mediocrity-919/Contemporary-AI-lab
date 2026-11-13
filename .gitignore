@@ -8,3 +8,8 @@ venv/
 tmp/
 Thumbs.db
 .DS_Store
+
+# Local PDF generation tools and intermediate output
+tests/build_report.py
+tests/report.css
+results/report.html
