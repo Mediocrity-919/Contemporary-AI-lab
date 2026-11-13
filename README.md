@@ -1,8 +1,7 @@
 # Lab2 搜索算法
 
 ## 环境与运行
-- Python 3.10 及以上 (在 3.14.2 上测试). 四道题的算法和测试只用标准库;
-  重新生成实验插图需要的依赖见 `requirements.txt`.
+- Python 3.10 及以上 (在 3.14.2 上测试). 算法、测试与对照实验只用 Python 标准库，无需安装额外依赖.
 - 在 lab2 根目录运行:
   - `python tests/test_all.py`: PDF 样例 + 边界情况测试, 全部通过时退出码为 0.
   - `python tests/experiments.py`: 四道题的基础对照实验 (节点数 + 计时).
@@ -11,10 +10,8 @@
   - `python tests/verify_independent.py`: 用独立实现的 Dijkstra / 完整回传对拍 (随机迷宫、地形、博弈树).
   - `python src/alphabeta.py tree.json`: 读取 PDF 格式的 JSON 博弈树, 输出 MAX 的最优值 (不给文件时用 PDF 样例).
   - `python src/treasure_game.py`: 打印 T4 的 6x6 距离矩阵, 以及 H=2/4 下 Minimax 与 Alpha-Beta 的结果.
-  - `python tests/report_data.py`: 生成实验报告的全部数据, 写入 `results/report_data.json` (约 15 秒).
-  - `python tests/make_figures.py`: 根据上面的数据生成 `figures/` 下的插图 (需要 matplotlib).
+  - `python tests/report_data.py`: 复现 T1–T4 与 E1–E4 的完整对照实验，输出统计摘要；生成的 `results/report_data.json` 仅保存在本地，已由 Git 忽略.
 - 实验报告: `report.md` 和 `report.pdf` (5 页).
-- `report_full.md`: 不限篇幅的完整版分析 (含全部推导和表格), 作底稿保留.
 - 中文输出乱码时加 `-X utf8`, 例如 `python -X utf8 tests/experiments.py`.
 
 ## 目录
@@ -23,6 +20,7 @@
 - `src/alphabeta.py`: T3 Minimax / Alpha-Beta.
 - `src/treasure_game.py`: T4 地图、博弈状态、距离矩阵与博弈搜索 (支持动态排序 `dynamic=True`、Minimax 状态缓存 `memo=True`).
 - `tests/bench.py`: 计时工具 (perf_counter_ns, 预热后取中位数).
+- `figures/`: 正式报告引用的四张插图.
 
 ## 接口
 - `astar_maze(start, end, grid) -> List[Tuple[int,int]]`, 无解返回 `[]`.

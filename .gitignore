@@ -9,7 +9,17 @@ tmp/
 Thumbs.db
 .DS_Store
 
-# Local PDF generation tools and intermediate output
-tests/build_report.py
-tests/report.css
-results/report.html
+# Generated experiment output and local report authoring files
+/results/
+/report_full.md
+/tests/build_report.py
+/tests/report.css
+/tests/make_figures.py
+/figures/fig3_e2_weighted_astar.png
+/figures/fig5_e3_random_trees.png
+
+# Lab1 files belong on the lab1 branch
+/data-Project1/
+/experiments/
+/prediction.csv
+/实验报告.md
